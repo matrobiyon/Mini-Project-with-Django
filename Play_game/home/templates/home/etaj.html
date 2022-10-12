@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Ошёнаи {{ etaj }} {% endblock %}
+{% block title_for_content %} Хучрахо {% endblock %}
+{% block content %}
+<div class="row row-cols-3 justify-content-center">
+	{% for i in hujraho %}
+		<a href="hujrai{{ i.hujra }}"><button class="btn btn-dark btn-outline-warning m-3 p-3 col-10 position-relative" style="color:white ;">
+            {{ i }}
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                Хучраи {{i.hujra}}
+                <span class="visually-hidden">unread messages</span>
+              </span>
+        </button></a> 					
+	{% endfor %}
+</div>
+
+{% endblock %} 

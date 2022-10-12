@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %} Хучраи {{ spisok.hujra }} {% endblock %}
+{% block title_for_content %}<h1> {{ spisok.name }}</h1> 
+{% endblock %}
+{% block content %}
+<div class="row p-3 fz-1 bg-success mx-3 fw-bold">
+    <div class="col">Мох</div>
+    <div class="col">Нархи пардохт</div>
+    <div class="col">Санаи пардохт</div>
+    <div class="col">Соли пардохт  </div>
+</div>
+    {% for i in malumot %} 
+<div class="row p-3 {% cycle 'bg-light' 'bg-success'%} mx-3" >
+    
+    <div class="col">{{ i.month }}</div>
+    <div class="col">{{ i.pardoxt }}</div>
+    <div class="col">{{ i.date }}</div>
+    <div class="col">{{ i.year }}</div>
+</div>   
+{% endfor %}
+{% endblock %}
+

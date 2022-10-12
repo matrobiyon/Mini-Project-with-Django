@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} Добро Пожаловать! {% endblock %}
+{% block title_for_content %} Ошёнахо {% endblock %}
+{% block content %}
+
+<div class="row row-cols-lg-3 row-cols-sm-2 my-0 justify-content-center ">
+	{% for i in etaj %}
+		<a href="etaji{{ i }}/"><button class="btn btn-dark btn-outline-warning m-3 p-3 col-10 position-relative" style="color:white;"> Ошёнаи {{ i }}</button></a> 					
+	{% endfor %}
+</div>
+		
+{% endblock %}
